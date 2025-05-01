@@ -7,8 +7,11 @@
 	Shell.FlyoutBehavior="Flyout"
 	Title="ShellContentOrderBug"
 	CurrentItem="{Reference otherPage}">
+	<Shell.FlyoutHeader>
+		<Label x:Name="theLabel" Text="Test text" />
+	</Shell.FlyoutHeader>
 	<ShellContent
-		Title="Home"
+		Title="{Binding Text, Source={Reference theLabel}, StringFormat='Title: {0}'}"
 		ContentTemplate="{DataTemplate local:MainPage}"
 		Route="MainPage" />
 	<ShellContent
