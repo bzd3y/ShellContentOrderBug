@@ -7,5 +7,6 @@
         <Label Text="Welcome to .NET MAUI!"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-    </StackLayout>
+		<Button Text="Click me" Clicked="Button_Clicked" />
+	</StackLayout>
 </ContentPage>
